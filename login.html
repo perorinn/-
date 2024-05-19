@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Авторизация</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<style>
+body{
+padding-left: 50%;
+font-size: 25px;
+}
+input{
+    width: 250px;
+    height: 40px;
+    font-size: 30px;
+    border-radius: 30px;
+    background-color: aquamarine;
+}
+.pp{
+    font-size: 18px;
+    font-style: italic;
+    align-items: center;
+}
+.ppi{
+    width: 25px;
+    height: 25px;
+    background-color: blueviolet;
+}
+.repa{
+    background-color: burlywood;
+    border-radius: 15px;
+    width: 100px;
+    height: 30px;
+    font-style: italic;
+    font-size: 16px;
+    text-decoration: none;
+}
+</style>
+<script>
+    function checkpassword(){
+        var password=document.getElementById("passwordBox")
+        var psd = password.value
+
+        if(psd=="altan"){
+            return true
+        }
+        else{
+            alert("доступ запрещен!!!неверный пароль")
+            return false
+        }
+    }
+
+    function showpassword(){
+        var password=document.getElementById("passwordBox")
+        if(password.type=="password")
+        password.type="text"
+    else{
+        password.type="password"
+    }
+    }
+
+</script>
+<body>
+<h1 style="color: cornsilk; padding-top: 200px;" >Авторизация</h1>
+<p>для входа введите пароль</p>
+<p>пароль: <input type="password" id="passwordBox"></p>
+<p class="pp"> <input class="ppi" type="checkbox" onclick="showpassword()" >      отобразить пароль</p>
+<button class="repa">
+<a class="repa" href="index.html" onclick="return checkpassword()" >
+    жми сюда
+</a>
+</button>
+</body>
+</html>
